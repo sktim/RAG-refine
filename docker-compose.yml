@@ -1,0 +1,21 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ollama_service
+    container_name: ollama_service_container
+    runtime: nvidia
+    ports:
+      - "8000:8000" # 必要に応じてポートを変更
+    volumes:
+      - .:/app
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: >
+      bash -c "/usr/local/bin/ollama serve"
