@@ -17,10 +17,12 @@ mypy_preset = "strict"
 line_length = 88
 py_version = "py312"
 [[tool.pysen.lint.mypy_targets]]
-  paths = ["src/"]
+  paths = ["."]
+  excludes = [".venv/"]
 
 [tool.pysen.lint.source]
-  includes = ["src/"]
+  includes = ["."]
+  excludes = [".venv/"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -30,13 +32,8 @@ langgraph = "^0.2.57"
 langchain-openai = "^0.2.12"
 langchain-core = "^0.3.23"
 python-dotenv = "^1.0.1"
-pandas = "1.5.3"
-tokenizers = "^0.21.0"
-pandasai = "^2.4.0"
-numpy = "1.23.5"
-seaborn = "^0.13.2"
 fastapi = "^0.115.6"
-uvicorn = "^0.32.1"
+uvicorn = "^0.34.0"
 
 
 [tool.poetry.group.dev.dependencies]
