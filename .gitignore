@@ -1,4 +1,5 @@
 .mypy_cache
 frontend/.venv
+frontend/__pycache__
 backend/.venv
-Llama-3-ELYZA-JP-8B-q4_k_m.gguf
+backend/__pycache__
