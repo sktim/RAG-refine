@@ -176,12 +176,12 @@ Output:
 """
 
 PROMPTS[
-    "entiti_continue_extraction"
+    "entity_continue_extraction"
 ] = """MANY knowdge fragements with entities were missed in the last extraction.  Add them below using the same format:
 """
 
 PROMPTS[
-    "entiti_if_loop_extraction"
+    "entity_if_loop_extraction"
 ] = """Please check whether knowdge fragements cover all the given text.  Answer YES | NO if there are knowdge fragements that need to be added.
 """
 
